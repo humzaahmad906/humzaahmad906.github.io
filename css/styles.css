@@ -272,9 +272,9 @@ a:hover {
 	height: 100px;
 	line-height: 100px;
 	font-size: 50px;
-	color: #505050;
+	color: white;
 	border-radius: 5px;
-	border: solid 1px #505050;
+	border: solid 1px white;
 	border-radius: 50%;
 }
 .subscribe p {
@@ -330,13 +330,13 @@ a:hover {
 	color: #333;
 }
 .subscribe-form .form-control:-moz-placeholder { 
-	color: #333;  
+	color: #333;
 }
 .subscribe-form .form-control::-moz-placeholder { 
-	color: #333;  
+	color: #333;
 }
 .subscribe-form .form-control:-ms-input-placeholder {  
-	color: #333;  
+	color: #333;
 }
 #portfolios {
 	padding-top: 100px;
@@ -688,7 +688,7 @@ padding:100px 0;
 	margin-left: 15px;
 	position: absolute; 
 	left: 0;
-	color: #505050;
+	color: white;
 	font-size: 25px;
 	line-height: 30px;
 }
