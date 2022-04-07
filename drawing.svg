@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg9545"
+   inkscape:export-filename="/home/humza/Downloads/personal_projects/my-company/images/logo_new.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="drawing.svg">
+  <defs
+     id="defs9539" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.41423966"
+     inkscape:cx="281.04721"
+     inkscape:cy="607.51471"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1318"
+     inkscape:window-height="704"
+     inkscape:window-x="48"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata9542">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot9547"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f4b400;fill-opacity:1;stroke:none;"
+       transform="matrix(0.72070187,0,0,0.68441445,-66.784862,-149.62557)"><flowRegion
+         id="flowRegion9549"
+         style="fill:#f4b400;fill-opacity:1;"><rect
+           id="rect9551"
+           width="371.42856"
+           height="191.42857"
+           x="114.28571"
+           y="342.51968"
+           style="fill:#f4b400;fill-opacity:1;" /></flowRegion><flowPara
+         id="flowPara9553">λ</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#db4437;fill-opacity:1;stroke:#db4437;stroke-width:0.26458332;stroke-opacity:0.94117647;"
+       x="36.323559"
+       y="95.905716"
+       id="text9557"><tspan
+         sodipodi:role="line"
+         id="tspan9555"
+         x="36.323559"
+         y="95.905716"
+         style="stroke-width:0.26458332;fill:#db4437;fill-opacity:1;stroke:#db4437;stroke-opacity:0.94117647;">AI</tspan><tspan
+         sodipodi:role="line"
+         x="36.323559"
+         y="109.13488"
+         style="stroke-width:0.26458332;fill:#db4437;fill-opacity:1;stroke:#db4437;stroke-opacity:0.94117647;"
+         id="tspan9559">Solutions</tspan></text>
+  </g>
+</svg>
