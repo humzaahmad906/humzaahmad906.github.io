@@ -9,41 +9,12 @@
 <link href="{{ '/fonts/icon-7-stroke/css/pe-icon-7-stroke.css' | relative_url }}" rel="stylesheet">
 <link href="{{ '/css/animate.css' | relative_url }}" rel="stylesheet" media="screen">
 <link href="{{ '/css/styles.css' | relative_url }}" rel="stylesheet" media="screen">
+<link href="{{ '/css/site-extras.css' | relative_url }}" rel="stylesheet" media="screen">
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700' rel='stylesheet' type='text/css'>
-
-<style>
-  body.blog-page { background: #fff; color: #2b2d2f; }
-  .blog-page #menu { position: static; }
-  .blog-hero {
-    background-image: url('{{ "/images/bg.jpg" | relative_url }}');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 120px 0 80px;
-    text-align: center;
-  }
-  .blog-hero h1 { font-weight: 300; letter-spacing: 2px; }
-  .blog-content { padding: 60px 0; }
-  .blog-content .container { max-width: 820px; }
-  .post-list { list-style: none; padding: 0; }
-  .post-list li { padding: 24px 0; border-bottom: 1px solid #eee; }
-  .post-list li:last-child { border-bottom: none; }
-  .post-list h3 { margin: 0 0 6px; }
-  .post-list h3 a { color: #2b2d2f; text-decoration: none; }
-  .post-list h3 a:hover { color: #1abc9c; }
-  .post-meta { color: #888; font-size: 14px; margin-bottom: 12px; }
-  .post-body { font-size: 16px; line-height: 1.7; }
-  .post-body h1, .post-body h2, .post-body h3 { margin-top: 1.6em; }
-  .post-body img { max-width: 100%; height: auto; }
-  .post-body pre { background: #f6f8fa; padding: 14px; border-radius: 4px; overflow-x: auto; }
-  .post-body code { background: #f6f8fa; padding: 2px 5px; border-radius: 3px; }
-  .post-body pre code { background: transparent; padding: 0; }
-  .post-body blockquote { border-left: 3px solid #1abc9c; padding-left: 16px; color: #555; }
-</style>
 </head>
-<body class="blog-page">
+<body class="content-page">
 
 <div id="menu">
   <nav class="navbar-wrapper navbar-default" role="navigation">
@@ -53,13 +24,15 @@
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand site-name" href="{{ '/' | relative_url }}"><img src="{{ '/images/logo_new.png' | relative_url }}" alt="logo"></a>
+        <a class="navbar-brand site-name" href="{{ '/' | relative_url }}" style="font-weight: 600; letter-spacing: 1px;">Humza Ahmad</a>
       </div>
       <div id="navbar-scroll" class="collapse navbar-collapse navbar-themers navbar-right">
         <ul class="nav navbar-nav">
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/#services' | relative_url }}">Services</a></li>
-          <li><a href="{{ '/#about-us' | relative_url }}">About us</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+          <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+          <li><a href="{{ '/talks/' | relative_url }}">Talks</a></li>
           <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
           <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
         </ul>
@@ -72,12 +45,19 @@
 
 <footer id="footer">
   <div class="container">
+    <div class="footer-links text-center">
+      <a href="{{ '/experience/' | relative_url }}">Experience</a>
+      <a href="{{ '/open-source/' | relative_url }}">Open Source</a>
+      <a href="{{ '/now/' | relative_url }}">Now</a>
+      <a href="{{ '/uses/' | relative_url }}">Uses</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </div>
     <div class="col-sm-4 col-sm-offset-4">
       <div class="social text-center">
         <ul>
           <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="https://github.com/humzaahmad906"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
         </ul>
       </div>
     </div>
