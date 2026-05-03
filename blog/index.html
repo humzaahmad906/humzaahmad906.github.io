@@ -2,28 +2,31 @@
 layout: default
 title: Blog
 permalink: /blog/
+description: "Notes, ideas, and lessons from building ML systems."
 ---
-<div class="blog-hero">
-  <div class="container">
-    <h1>Blog</h1>
-    <p style="color: rgba(255,255,255,0.85); margin-top: 10px;">Notes, ideas, and updates.</p>
-  </div>
-</div>
 
-<div class="blog-content">
+<header class="page-head reveal">
+  <div class="container">
+    <div class="eyebrow">/ blog</div>
+    <h1>Notes &amp; ideas.</h1>
+    <p class="lede">Notes, lessons, and longer-form thinking from building machine learning systems.</p>
+  </div>
+</header>
+
+<section class="section-spacing" style="padding-top: 1rem;">
   <div class="container">
     {% if site.posts.size == 0 %}
-      <p>No posts yet. Check back soon.</p>
+      <p class="muted">No posts yet. Check back soon.</p>
     {% else %}
-      <ul class="post-list">
+      <ul class="entry-list reveal">
         {% for post in site.posts %}
           <li>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <div class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %} &middot; {{ post.author }}{% endif %}</div>
-            {% if post.excerpt %}<div>{{ post.excerpt }}</div>{% endif %}
+            <div class="meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %} · {{ post.author }}{% endif %}</div>
+            {% if post.description %}<p>{{ post.description }}</p>{% elsif post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 200 }}</p>{% endif %}
           </li>
         {% endfor %}
       </ul>
     {% endif %}
   </div>
-</div>
+</section>
