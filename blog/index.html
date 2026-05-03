@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<div class="blog-hero">
+  <div class="container">
+    <h1>Blog</h1>
+    <p style="color: rgba(255,255,255,0.85); margin-top: 10px;">Notes, ideas, and updates.</p>
+  </div>
+</div>
+
+<div class="blog-content">
+  <div class="container">
+    {% if site.posts.size == 0 %}
+      <p>No posts yet. Check back soon.</p>
+    {% else %}
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <div class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %} &middot; {{ post.author }}{% endif %}</div>
+            {% if post.excerpt %}<div>{{ post.excerpt }}</div>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
