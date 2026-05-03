@@ -1,21 +1,19 @@
 ---
 layout: default
 ---
-<div class="blog-hero">
-  <div class="container">
-    <h1>{{ page.title }}</h1>
-    <div class="post-meta" style="color: rgba(255,255,255,0.8); margin-top: 10px;">
-      {{ page.date | date: "%B %-d, %Y" }}{% if page.author %} &middot; {{ page.author }}{% endif %}
+<article class="container" style="padding-top: 3rem; padding-bottom: 4rem;">
+  <header style="margin-bottom: 2.5rem;">
+    <div class="mono" style="color: var(--muted); font-size: 0.85rem; margin-bottom: 0.5rem;">
+      {{ page.date | date: "%B %-d, %Y" }}{% if page.author %} · {{ page.author }}{% endif %}{% if page.reading_time %} · {{ page.reading_time }} min read{% endif %}
     </div>
-  </div>
-</div>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lede" style="color: var(--muted-strong); font-size: 1.1rem;">{{ page.description }}</p>{% endif %}
+  </header>
 
-<div class="blog-content">
-  <div class="container">
-    <article class="post-body">
-      {{ content }}
-    </article>
-    <hr style="margin-top: 40px;">
-    <p><a href="{{ '/blog/' | relative_url }}">&larr; Back to all posts</a></p>
+  <div class="post-body">
+    {{ content }}
   </div>
-</div>
+
+  <hr>
+  <p style="font-size: 0.92rem;"><a href="{{ '/blog/' | relative_url }}">← All posts</a></p>
+</article>

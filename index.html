@@ -1,280 +1,116 @@
-<!DOCTYPE html>
-<html>
-<head>
+---
+layout: default
+title: ""
+description: "Humza Ahmad — Machine Learning Engineer building AI systems that solve hard, real-world problems."
+---
 
-<title>Humza Ahmad — Machine Learning Engineer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="description" content="Humza Ahmad — Machine Learning Engineer. Computer vision, NLP, and ML systems.">
-
-<link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="./css/font-awesome.min.css" rel="stylesheet">
-<link href="./fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
-<link href="./css/animate.css" rel="stylesheet" media="screen">
-<link href="./css/owl.theme.css" rel="stylesheet">
-<link href="./css/owl.carousel.css" rel="stylesheet">
-<link href="./css/styles.css" rel="stylesheet" media="screen">
-<link href="./css/site-extras.css" rel="stylesheet" media="screen">
-
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700' rel='stylesheet' type='text/css'>
-</head>
-
-<body data-spy="scroll" data-target="#navbar-scroll">
-
-<div id="top"></div>
-
-<div class="fullscreen landing parallax" style="background-image:url('images/bg.jpg');" data-img-width="2000" data-img-height="1325" data-diff="100">
-  <div class="overlay">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h1 class="wow fadeInLeft">Humza Ahmad</h1>
-          <div class="landing-text wow fadeInUp">
-            <p>MACHINE LEARNING ENGINEER &middot; BUILDING AI SYSTEMS THAT SOLVE REAL-WORLD PROBLEMS IN COMPUTER VISION, NLP, AND BEYOND</p>
-          </div>
-          <div class="head-btn wow fadeInLeft">
-            <a href="/projects/" class="btn-default">View Projects</a>
-            <a href="/blog/" class="btn-default" style="margin-left: 10px;">Read the Blog</a>
-          </div>
-          <br/><br/>
-        </div>
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="container-wide">
+    <div class="hero-inner reveal">
+      <span class="eyebrow"><span class="dot"></span> Available for new projects</span>
+      <h1>Machine learning,<br>shipped to <span class="gradient-text">production</span>.</h1>
+      <p class="lede">I'm Humza Ahmad — a machine learning engineer building AI systems in computer vision, NLP, and large language models that work past the demo and into real-world use.</p>
+      <div class="hero-actions">
+        <a href="/projects/" class="btn btn-arrow">Explore my work</a>
+        <a href="/blog/" class="btn btn-ghost">Read the blog</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">5+</div><div class="lbl">Years in ML</div></div>
+        <div class="hero-stat"><div class="num">20+</div><div class="lbl">Projects shipped</div></div>
+        <div class="hero-stat"><div class="num">∞</div><div class="lbl">Curiosity</div></div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- NAVIGATION -->
-<div id="menu">
-  <nav class="navbar-wrapper navbar-default" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-themers">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand site-name" href="#top" style="font-weight: 600; letter-spacing: 1px;">Humza Ahmad</a>
-      </div>
-      <div id="navbar-scroll" class="collapse navbar-collapse navbar-themers navbar-right">
-        <ul class="nav navbar-nav">
-          <li><a href="#top">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/projects/">Projects</a></li>
-          <li><a href="/publications/">Publications</a></li>
-          <li><a href="/talks/">Talks</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<section class="section-spacing">
+  <div class="container-wide">
+    <div class="section-heading reveal">
+      <div>
+        <span class="label">/ what i do</span>
+        <h2>Building intelligent systems</h2>
       </div>
     </div>
-  </nav>
-</div>
-
-
-<div id="services" style="color: #2b2d2f">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 col-sm-12 text-center feature-title">
-        <h2>What I Do</h2>
+    <div class="card-grid reveal">
+      <div class="card">
+        <h3>Computer Vision</h3>
+        <div class="tags">PyTorch · OpenCV · CUDA</div>
+        <p>Image classification, detection, segmentation, and multi-modal pipelines — from data collection to real-time inference at the edge.</p>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="col-sm-4 feat-list">
-          <h4>COMPUTER VISION</h4>
-          <div class="inner">
-            <p>Designing and shipping image-analysis systems — from classification and detection to multi-modal pipelines. I work across the stack: data, models, deployment, and monitoring.</p>
-          </div>
-        </div>
-        <div class="col-sm-4 feat-list">
-          <h4>NATURAL LANGUAGE PROCESSING</h4>
-          <div class="inner">
-            <p>Building NLP applications: information extraction, text classification, semantic search, and modern LLM-powered systems including RAG, agents, and tool use.</p>
-          </div>
-        </div>
-        <div class="col-sm-4 feat-list">
-          <h4>ML MODEL DEVELOPMENT</h4>
-          <div class="inner">
-            <p>Selecting, training, and tuning models for specific business problems. I emphasize careful evaluation, reproducibility, and choosing the simplest model that works.</p>
-          </div>
-        </div>
+      <div class="card">
+        <h3>Natural Language Processing</h3>
+        <div class="tags">Transformers · LLMs · RAG</div>
+        <p>Information extraction, semantic search, and modern LLM systems including retrieval-augmented generation, agents, and structured tool use.</p>
       </div>
-    </div>
-    <div class="row row-feat">
-      <div class="col-md-12">
-        <div class="col-sm-4 feat-list">
-          <h4>DATA SCIENCE CONSULTING</h4>
-          <div class="inner">
-            <p>Translating business questions into data problems. From exploratory analysis and dashboards to AI strategy and roadmap definition.</p>
-          </div>
-        </div>
-        <div class="col-sm-4 feat-list">
-          <h4>ML INFRASTRUCTURE</h4>
-          <div class="inner">
-            <p>Setting up the unsexy but essential pieces — training pipelines, experiment tracking, model serving, and CI/CD for ML — so models actually make it to production.</p>
-          </div>
-        </div>
-        <div class="col-sm-4 feat-list">
-          <h4>MANAGED AI</h4>
-          <div class="inner">
-            <p>Full-lifecycle ownership: hosting models, retraining schedules, performance monitoring, and engineering work to integrate AI into your existing software.</p>
-          </div>
-        </div>
+      <div class="card">
+        <h3>ML Engineering</h3>
+        <div class="tags">Python · K8s · MLflow</div>
+        <p>Training pipelines, experiment tracking, model serving, and CI/CD for ML — the boring infrastructure that decides whether a model ever ships.</p>
+      </div>
+      <div class="card">
+        <h3>AI Strategy</h3>
+        <div class="tags">Consulting · Roadmaps</div>
+        <p>Translating ambiguous business problems into well-scoped data and ML problems with realistic timelines and success criteria.</p>
+      </div>
+      <div class="card">
+        <h3>Research &amp; Prototyping</h3>
+        <div class="tags">Papers · Experiments</div>
+        <p>Implementing recent papers, ablating ideas quickly, and writing up findings clearly — bridging research and production engineering.</p>
+      </div>
+      <div class="card">
+        <h3>Managed AI</h3>
+        <div class="tags">Hosting · Monitoring</div>
+        <p>End-to-end ownership: model hosting, retraining schedules, performance monitoring, and integration with existing software systems.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div id="featured" style="color: #2b2d2f; background: #f9f9f9; padding: 80px 0;">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 text-center feature-title">
-        <h2>Featured Work</h2>
-        <p>Selected projects, papers, and writing.</p>
+<section class="section-spacing">
+  <div class="container-wide">
+    <div class="section-heading reveal">
+      <div>
+        <span class="label">/ explore</span>
+        <h2>Featured</h2>
       </div>
     </div>
-    <div class="row" style="margin-top: 40px;">
-      <div class="col-sm-4 text-center">
-        <i class="pe-7s-rocket pe-4x" style="color: #1abc9c;"></i>
-        <h4 style="margin-top: 16px;">Projects</h4>
-        <p>Research and applied ML projects across vision, language, and infrastructure.</p>
-        <a href="/projects/" class="btn-default" style="font-size: 13px; padding: 8px 18px;">Browse</a>
-      </div>
-      <div class="col-sm-4 text-center">
-        <i class="pe-7s-news-paper pe-4x" style="color: #1abc9c;"></i>
-        <h4 style="margin-top: 16px;">Publications</h4>
+    <div class="feature-row reveal">
+      <a href="/projects/" class="feature-item">
+        <div class="icon">◆</div>
+        <h3>Projects →</h3>
+        <p>Applied ML across vision, language, and infrastructure.</p>
+      </a>
+      <a href="/publications/" class="feature-item">
+        <div class="icon">¶</div>
+        <h3>Publications →</h3>
         <p>Papers, technical articles, and longer-form writing.</p>
-        <a href="/publications/" class="btn-default" style="font-size: 13px; padding: 8px 18px;">Read</a>
-      </div>
-      <div class="col-sm-4 text-center">
-        <i class="pe-7s-micro pe-4x" style="color: #1abc9c;"></i>
-        <h4 style="margin-top: 16px;">Talks</h4>
-        <p>Conference talks, meetups, and recorded interviews.</p>
-        <a href="/talks/" class="btn-default" style="font-size: 13px; padding: 8px 18px;">Watch</a>
-      </div>
+      </a>
+      <a href="/talks/" class="feature-item">
+        <div class="icon">◐</div>
+        <h3>Talks →</h3>
+        <p>Conference talks, workshops, and podcast appearances.</p>
+      </a>
+      <a href="/blog/" class="feature-item">
+        <div class="icon">✎</div>
+        <h3>Blog →</h3>
+        <p>Notes, ideas, and lessons from building ML systems.</p>
+      </a>
     </div>
   </div>
-</div>
+</section>
 
-<div id="about-us" style="color: #2b2d2f">
+<section class="section-spacing">
   <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 col-sm-12 text-center feature-title">
-        <h2>About Me</h2>
-        <p>I'm Humza Ahmad — a machine learning engineer focused on building AI systems that work in the real world, not just in benchmarks.</p>
-      </div>
+    <div class="reveal">
+      <span class="label" style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.15em;">/ approach</span>
+      <h2 style="margin-top: 0.5rem;">I build for production, not benchmarks.</h2>
+      <p style="font-size: 1.1rem; max-width: 680px;">My focus is shipping ML systems that survive contact with real users, real data, and real cost constraints. I start with the business problem, pick the simplest tool that works, and care about the unsexy parts — evaluation, monitoring, and the engineering that keeps models alive once they're deployed.</p>
+      <p style="font-size: 1.1rem; max-width: 680px;">If that's the kind of work you're trying to do, <a href="/about/">read more about how I work</a> or <a href="mailto:humzaahmad9066@gmail.com">get in touch directly</a>.</p>
     </div>
-    <div class="row row-feat">
-      <div class="col-md-12">
-        <div class="col-sm-4 feat-list">
-          <div class="inner">
-            <h4>HOW I WORK</h4>
-            <p>I start with the business problem, then pick the simplest tool that solves it. I care about evaluation, monitoring, and the boring engineering that keeps models alive in production.</p>
-          </div>
-        </div>
-        <div class="col-sm-4 feat-list">
-          <div class="inner">
-            <h4>WHAT I'M GOOD AT</h4>
-            <p>End-to-end ownership: framing the problem, building the dataset, training the model, deploying it, and iterating on real usage. Comfortable across vision, NLP, and modern LLM systems.</p>
-          </div>
-        </div>
-        <div class="col-sm-4 feat-list">
-          <div class="inner">
-            <h4>WHAT I'M LOOKING FOR</h4>
-            <p>Hard problems with real constraints, teams that ship, and work that matters beyond the demo. <a href="/now/">See what I'm focused on right now &rarr;</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-center" style="margin-top: 30px;">
-      <a href="/about/" class="btn-default">More about me</a>
+    <div class="cta-box reveal">
+      <p style="margin: 0 0 1.25rem; font-size: 1.05rem;">Open to consulting, full-time roles, and collaboration on hard ML problems.</p>
+      <a href="mailto:humzaahmad9066@gmail.com" class="btn btn-arrow">Start a conversation</a>
     </div>
   </div>
-</div>
-
-
-<div id="subscribe">
-  <div class="subscribe fullscreen parallax" style="background-image:url('images/bg.jpg');" data-img-width="1920" data-img-height="1281" data-diff="100">
-    <div class="overlay">
-      <div class="container">
-        <div class="col-md-4 col-md-offset-4 text-center">
-          <i class="pe-7s-mail pe-va letter wow fadeInUp"></i>
-        </div>
-        <div class="col-md-8 col-md-offset-2 text-center">
-          <p>Get occasional posts on machine learning, engineering, and what I'm building.</p>
-          <div class="subscribe-form wow fadeInUp">
-            <form class="news-letter" action="" role="form" method="POST">
-              <input class="form-control" type="email" name="email" placeholder="Your email..." required>
-              <button type="submit" class="subscribe-btn btn">SUBSCRIBE</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="contact">
-  <div class="contact fullscreen parallax" style="background-image:url('images/bg2.jpg');" data-img-width="2000" data-img-height="1334" data-diff="100">
-    <div class="overlay">
-      <div class="container">
-        <div class="row contact-row">
-          <div class="col-sm-5 contact-left wow fadeInUp">
-            <h2>GET IN TOUCH</h2>
-            <ul class="ul-address">
-              <li><i class="pe-7s-phone"></i>+92 (340) 366-8816<br>+92 (314) 509-0691</li>
-              <li><i class="pe-7s-mail"></i><a href="mailto:humzaahmad9066@gmail.com">humzaahmad9066@gmail.com</a></li>
-              <li><i class="pe-7s-look"></i><a href="https://github.com/humzaahmad906">github.com/humzaahmad906</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-7 contact-right">
-            <form method="POST" id="contact-form" class="form-horizontal" action="contactengine.php" onSubmit="alert('Thank you for your message!');">
-              <div class="form-group">
-                <input type="text" name="Name" id="Name" class="form-control wow fadeInUp" placeholder="Name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" name="Email" id="Email" class="form-control wow fadeInUp" placeholder="Email" required>
-              </div>
-              <div class="form-group">
-                <textarea name="Message" rows="20" cols="20" id="Message" class="form-control input-message wow fadeInUp" placeholder="Message" required></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" name="submit" value="Send" class="btn btn-success wow fadeInUp">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer id="footer">
-  <div class="container">
-    <div class="footer-links text-center">
-      <a href="/experience/">Experience</a>
-      <a href="/open-source/">Open Source</a>
-      <a href="/now/">Now</a>
-      <a href="/uses/">Uses</a>
-      <a href="/feed.xml">RSS</a>
-    </div>
-    <div class="col-sm-4 col-sm-offset-4">
-      <div class="social text-center">
-        <ul>
-          <li><a class="wow fadeInUp" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-          <li><a class="wow fadeInUp" href="https://github.com/humzaahmad906" data-wow-delay="0.2s"><i class="fa fa-github"></i></a></li>
-          <li><a class="wow fadeInUp" href="https://www.linkedin.com/" data-wow-delay="0.4s"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script>new WOW().init();</script>
-</body>
-</html>
+</section>
