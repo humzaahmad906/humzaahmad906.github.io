@@ -1,7 +1,11 @@
-title: Lambda AI Solutions
-description: Blog and updates from Lambda AI Solutions
+title: Humza Ahmad
+tagline: Machine Learning Engineer
+description: Personal site, projects, writing, and talks by Humza Ahmad — Machine Learning Engineer.
 url: "https://humzaahmad906.github.io"
 baseurl: ""
+author: Humza Ahmad
+email: humzaahmad9066@gmail.com
+github_username: humzaahmad906
 
 markdown: kramdown
 highlighter: rouge
