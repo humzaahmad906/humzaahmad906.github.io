@@ -1,0 +1,24 @@
+title: Lambda AI Solutions
+description: Blog and updates from Lambda AI Solutions
+url: "https://humzaahmad906.github.io"
+baseurl: ""
+
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+exclude:
+  - readme.txt
+  - contactengine.php
+  - contactthanks.php
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
