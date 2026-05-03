@@ -546,6 +546,142 @@ blockquote { border-left: 2px solid var(--accent); padding: 0.25rem 0 0.25rem 1.
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.85s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 
+/* Scroll-pin zoom — image starts small, grows to fullscreen as you scroll */
+.scroll-pin-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+.scroll-pin-target {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 40px 100px -20px rgba(0,0,0,0.6), 0 0 80px rgba(56,189,248,0.15);
+  overflow: hidden;
+  will-change: transform, border-radius;
+}
+.scroll-pin-target::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(8,8,12,0.85) 100%);
+  pointer-events: none;
+}
+.scroll-pin-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 3rem;
+  z-index: 2;
+  text-align: left;
+}
+.scroll-pin-overlay .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.scroll-pin-overlay h2 { font-size: clamp(1.5rem, 4vw, 3rem); margin: 0 0 0.5rem; color: #fff; }
+.scroll-pin-overlay p { color: rgba(255,255,255,0.85); max-width: 600px; font-size: 1.05rem; margin: 0; }
+@media (max-width: 720px) {
+  .scroll-pin-overlay { padding: 1.5rem; }
+}
+
+/* Horizontal scroll showcase */
+.horizontal-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.horizontal-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 1.5rem;
+}
+.horizontal-track {
+  display: flex;
+  gap: 1.25rem;
+  align-items: stretch;
+  will-change: transform;
+}
+.horizontal-card {
+  flex: 0 0 auto;
+  width: clamp(280px, 32vw, 460px);
+  height: clamp(320px, 60vh, 520px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.horizontal-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(56,189,248,0.06), rgba(168,85,247,0.06));
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.horizontal-card:hover::before { opacity: 1; }
+.horizontal-card .num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+.horizontal-card h3 { font-size: 1.5rem; margin: 1rem 0 0.5rem; }
+.horizontal-card .tags { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+.horizontal-card p { color: var(--muted-strong); font-size: 0.95rem; }
+.horizontal-card .arrow {
+  align-self: flex-end;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  transition: transform 0.25s, border-color 0.25s;
+}
+.horizontal-card:hover .arrow { transform: translateX(6px); border-color: var(--accent); }
+.horizontal-intro {
+  flex: 0 0 clamp(260px, 30vw, 380px);
+  padding-right: 1rem;
+}
+.horizontal-intro .label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.horizontal-intro h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin: 0 0 1rem; }
+.horizontal-intro p { color: var(--muted-strong); margin: 0 0 1.25rem; }
+.horizontal-progress {
+  position: absolute;
+  left: 0; right: 0; bottom: 1.5rem;
+  height: 2px;
+  background: var(--border);
+  margin: 0 1.5rem;
+  border-radius: 1px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   .reveal { opacity: 1; transform: none; }
