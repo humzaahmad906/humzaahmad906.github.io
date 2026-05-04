@@ -25,16 +25,16 @@ if (canvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const basePositions = geo.attributes.position.array.slice();
 
   const wireMat = new THREE.MeshBasicMaterial({
-    color: 0x38bdf8,
+    color: 0xffffff,
     wireframe: true,
     transparent: true,
-    opacity: 0.55
+    opacity: 0.45
   });
   const innerMat = new THREE.MeshBasicMaterial({
-    color: 0xa855f7,
+    color: 0xff2547,
     wireframe: true,
     transparent: true,
-    opacity: 0.18
+    opacity: 0.22
   });
 
   const mesh = new THREE.Mesh(geo, wireMat);
@@ -58,10 +58,10 @@ if (canvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const particleGeo = new THREE.BufferGeometry();
   particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
   const particleMat = new THREE.PointsMaterial({
-    color: 0x38bdf8,
-    size: 0.025,
+    color: 0xffffff,
+    size: 0.022,
     transparent: true,
-    opacity: 0.7
+    opacity: 0.55
   });
   const particles = new THREE.Points(particleGeo, particleMat);
   scene.add(particles);
