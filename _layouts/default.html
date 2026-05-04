@@ -21,6 +21,9 @@
 <header class="site-header">
   <nav class="site-nav">
     <a class="site-brand" href="{{ '/' | relative_url }}">Humza Ahmad</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle-icon"></span>
+    </button>
     <ul class="nav-links">
       <li><a href="{{ '/projects/' | relative_url }}"{% if page.url contains '/projects' %} class="active"{% endif %}>Projects</a></li>
       <li><a href="{{ '/publications/' | relative_url }}"{% if page.url contains '/publications' %} class="active"{% endif %}>Publications</a></li>
@@ -80,7 +83,6 @@
 <script src="https://unpkg.com/lenis@1.0.42/dist/lenis.min.js"></script>
 <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-{% if page.url == '/' %}<script type="module" src="{{ '/assets/js/three-hero.js' | relative_url }}"></script>{% endif %}
 <script src="{{ '/assets/js/effects.js' | relative_url }}"></script>
 
 </body>
