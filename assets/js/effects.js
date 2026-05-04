@@ -38,49 +38,44 @@ if (window.gsap && window.ScrollTrigger && !window.matchMedia('(prefers-reduced-
     gsap.ticker.lagSmoothing(0);
   }
 
-  // ===== Pinned scroll-zoom: image scales from small to fullscreen as you scroll =====
+  // ===== Pinned scroll-zoom: ONLY transform: scale() animates (no border-radius/opacity/shadow) =====
   gsap.utils.toArray('.scroll-pin-section').forEach((section) => {
     const target = section.querySelector('.scroll-pin-target');
-    const overlay = section.querySelector('.scroll-pin-overlay');
     if (!target) return;
 
     gsap.fromTo(
       target,
-      { scale: 0.45, borderRadius: '32px', opacity: 0.85 },
+      { scale: 0.55 },
       {
-        scale: 1.15,
-        borderRadius: '0px',
-        opacity: 1,
+        scale: 1.0,
         ease: 'none',
+        force3D: true,
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=130%',
+          end: '+=110%',
           pin: true,
-          scrub: 1.0,
+          scrub: 0.4,
           anticipatePin: 1,
           invalidateOnRefresh: true
         }
       }
     );
-    if (overlay) {
-      gsap.fromTo(
-        overlay,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top top',
-            end: '+=60%',
-            scrub: 1
-          }
-        }
-      );
-    }
   });
+
+  // ===== Terminal: trigger typing animation when in view =====
+  const terminals = document.querySelectorAll('.terminal');
+  if (terminals.length && 'IntersectionObserver' in window) {
+    const termIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('typing');
+          termIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.25 });
+    terminals.forEach((t) => termIO.observe(t));
+  }
 
   // ===== Horizontal scroll: track translates X while page scrolls Y =====
   gsap.utils.toArray('.horizontal-section').forEach((section) => {
@@ -95,7 +90,7 @@ if (window.gsap && window.ScrollTrigger && !window.matchMedia('(prefers-reduced-
         start: 'top top',
         end: () => `+=${track.scrollWidth - window.innerWidth + 200}`,
         pin: true,
-        scrub: 1,
+        scrub: 0.4,
         invalidateOnRefresh: true
       }
     });
