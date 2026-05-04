@@ -1,83 +1,34 @@
 ---
 layout: default
 title: ""
-description: "Humza Ahmad — Machine Learning Engineer building AI systems that solve hard, real-world problems."
+description: "Humza Ahmad — Machine Learning Engineer building AI systems that ship to production."
 ---
 
 <section class="hero">
-  <div class="container-wide">
-    <div class="hero-grid reveal">
-      <div class="hero-inner">
-        <div class="hero-meta">
-          <span class="tag">[ML.ENGINEER]</span>
-          <span>/ID: 0001</span>
-          <span>// 33.6N · 73.0E</span>
-          <span class="live">SYSTEM ONLINE</span>
-        </div>
-        <h1 class="hero-title">
-          <span class="small">// Profile.001</span>
-          Humza<br>Ahmad
-        </h1>
-        <p class="lede">Machine learning engineer building AI systems for computer vision, NLP, and large language models — the kind that survive contact with real users, real data, and real cost constraints.</p>
-        <div style="margin: 0 0 2rem;">
-          <span class="term-accent"><span class="prompt">$</span> ./humza --status<span class="cursor"></span></span>
-        </div>
-        <div class="hero-actions">
-          <a href="/projects/" class="btn">Explore Work</a>
-          <a href="/blog/" class="btn btn-ghost">Read Blog</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat" data-id="01"><div class="num"><span data-count="5" data-suffix="+">0</span></div><div class="lbl">Years in ML</div></div>
-          <div class="hero-stat" data-id="02"><div class="num"><span data-count="20" data-suffix="+">0</span></div><div class="lbl">Projects shipped</div></div>
-          <div class="hero-stat" data-id="03"><div class="num">∞</div><div class="lbl">Curiosity</div></div>
-        </div>
-      </div>
-
-      <aside class="hero-readout" aria-label="System readout">
-        <div class="readout-head">
-          <span>// SYSTEM</span>
-          <span class="readout-pulse"></span>
-        </div>
-        <dl class="readout-list">
-          <div><dt>STATUS</dt><dd class="ok">ONLINE</dd></div>
-          <div><dt>BUILD</dt><dd>v2.0.1</dd></div>
-          <div><dt>LOC</dt><dd>33.6N · 73.0E</dd></div>
-          <div><dt>TIME</dt><dd id="readout-time">--:-- PKT</dd></div>
-          <div><dt>UPTIME</dt><dd>5y 142d</dd></div>
-          <div><dt>STACK</dt><dd>PY · TS · CUDA</dd></div>
-          <div><dt>FOCUS</dt><dd>VISION · NLP · LLM</dd></div>
-        </dl>
-        <div class="readout-foot">
-          <div class="readout-bars">
-            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-          </div>
-          <span>// LOAD: STABLE</span>
-        </div>
-      </aside>
+  <div class="hero-text reveal">
+    <span class="greeting">👋 Hey there.</span>
+    <h1>I'm Humza, a machine learning engineer.</h1>
+    <p>I build AI systems for computer vision, NLP, and large language models — the kind that survive contact with real users, real data, and real cost constraints.</p>
+    <div class="hero-actions">
+      <a href="/projects/" class="btn btn-arrow">See my work</a>
+      <a href="/about/" class="btn btn-ghost">About me</a>
     </div>
+  </div>
+  <div class="hero-photo reveal">
+    <img src="{{ '/images/humza.jpeg' | relative_url }}" alt="Humza Ahmad">
   </div>
 </section>
 
-<section class="scroll-pin-section">
-  <div class="scroll-pin-target">
-    <div class="terminal">
-      <div class="terminal-bar">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="terminal-title">~/humza-ahmad — zsh</span>
-      </div>
-      <div class="terminal-body">
-        <div class="line"><span class="prompt-user">humza</span><span class="info">@</span><span class="prompt-host">workstation</span> <span class="prompt-path">~</span> <span class="prompt">$</span> whoami</div>
-        <div class="line"><span class="info"># machine learning engineer</span></div>
-        <div class="line"><span class="prompt-user">humza</span><span class="info">@</span><span class="prompt-host">workstation</span> <span class="prompt-path">~</span> <span class="prompt">$</span> ls projects/</div>
-        <div class="line"><span class="dir">computer-vision/</span>  <span class="dir">nlp/</span>  <span class="dir">llm-systems/</span>  <span class="dir">ml-infra/</span></div>
-        <div class="line"><span class="prompt-user">humza</span><span class="info">@</span><span class="prompt-host">workstation</span> <span class="prompt-path">~</span> <span class="prompt">$</span> cat status.txt</div>
-        <div class="line"><span class="ok">→ shipping AI that survives contact with real users.</span></div>
-        <div class="line"><span class="prompt-user">humza</span><span class="info">@</span><span class="prompt-host">workstation</span> <span class="prompt-path">~</span> <span class="prompt">$</span> ./contact --available</div>
-        <div class="line"><span class="warn">[ok]</span> open to consulting, full-time, and collaboration</div>
-        <div class="line"><span class="prompt-user">humza</span><span class="info">@</span><span class="prompt-host">workstation</span> <span class="prompt-path">~</span> <span class="prompt">$</span> <span class="cursor"></span></div>
-      </div>
+<section class="section-tight">
+  <div class="container-wide">
+    <div class="newsletter reveal">
+      <h2>Get notes on building ML systems.</h2>
+      <p>Occasional emails on machine learning, engineering, and the things I'm building. No spam, unsubscribe anytime.</p>
+      <form action="#" method="POST">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+      <span class="micro">Join readers from all over the world.</span>
     </div>
   </div>
 </section>
@@ -85,100 +36,57 @@ description: "Humza Ahmad — Machine Learning Engineer building AI systems that
 <section class="section-spacing">
   <div class="container-wide">
     <div class="section-heading reveal">
-      <div>
-        <span class="label"><span class="num">[01]</span> // capabilities</span>
-        <h2>What I do.</h2>
-      </div>
+      <h2>Latest writing</h2>
+      <a href="/blog/" class="more">All posts →</a>
     </div>
-    <div class="card-grid reveal">
-      <div class="card" data-id="001">
-        <div class="tags">+ vision · pytorch · cuda</div>
-        <h3>Computer Vision</h3>
-        <p>Image classification, detection, segmentation, and multi-modal pipelines — from data collection to real-time inference at the edge.</p>
-      </div>
-      <div class="card" data-id="002">
-        <div class="tags">+ nlp · transformers · rag</div>
-        <h3>Natural Language</h3>
-        <p>Information extraction, semantic search, and modern LLM systems including retrieval-augmented generation, agents, and tool use.</p>
-      </div>
-      <div class="card" data-id="003">
-        <div class="tags">+ infra · k8s · mlflow</div>
-        <h3>ML Engineering</h3>
-        <p>Training pipelines, experiment tracking, model serving, and CI/CD for ML — the boring infra that decides whether a model ever ships.</p>
-      </div>
-      <div class="card" data-id="004">
-        <div class="tags">+ strategy · roadmaps</div>
-        <h3>AI Strategy</h3>
-        <p>Translating ambiguous business problems into well-scoped data and ML problems with realistic timelines and success criteria.</p>
-      </div>
-      <div class="card" data-id="005">
-        <div class="tags">+ research · papers</div>
-        <h3>Research</h3>
-        <p>Implementing recent papers, ablating ideas quickly, and writing up findings clearly — bridging research and production engineering.</p>
-      </div>
-      <div class="card" data-id="006">
-        <div class="tags">+ managed · monitoring</div>
-        <h3>Managed AI</h3>
-        <p>End-to-end ownership: model hosting, retraining schedules, performance monitoring, and integration with existing software systems.</p>
-      </div>
+    <div class="posts-grid reveal">
+      <a href="/blog/" class="post-card">
+        <div class="thumb">✎</div>
+        <div class="meta">Coming soon</div>
+        <h3>[Featured post title]</h3>
+        <p>Short hook describing the post.</p>
+      </a>
+      <a href="/blog/" class="post-card">
+        <div class="thumb">◈</div>
+        <div class="meta">Coming soon</div>
+        <h3>[Featured post title]</h3>
+        <p>Short hook describing the post.</p>
+      </a>
+      <a href="/blog/" class="post-card">
+        <div class="thumb">◐</div>
+        <div class="meta">Coming soon</div>
+        <h3>[Featured post title]</h3>
+        <p>Short hook describing the post.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="horizontal-section">
-  <div class="horizontal-inner">
-    <div class="horizontal-track">
-      <div class="horizontal-intro">
-        <span class="label"><span style="color: var(--muted);">[02]</span> // selected work</span>
-        <h2>Things I've built.</h2>
-        <p>Scroll horizontally — or jump to the full archive.</p>
-        <a href="/projects/" class="btn">All Projects</a>
-      </div>
-      <div class="horizontal-card">
-        <div>
-          <span class="num">/ 001</span>
-          <h3>[Project Name]</h3>
-          <span class="tags">+ vision · pytorch</span>
-        </div>
-        <p>One-paragraph summary leading with outcome — scale, accuracy, latency, or impact.</p>
-        <span class="arrow">→</span>
-      </div>
-      <div class="horizontal-card">
-        <div>
-          <span class="num">/ 002</span>
-          <h3>[Project Name]</h3>
-          <span class="tags">+ nlp · llms · rag</span>
-        </div>
-        <p>One-paragraph summary. Lead with what changed because this existed.</p>
-        <span class="arrow">→</span>
-      </div>
-      <div class="horizontal-card">
-        <div>
-          <span class="num">/ 003</span>
-          <h3>[Project Name]</h3>
-          <span class="tags">+ infra · k8s</span>
-        </div>
-        <p>One-paragraph summary describing the system and the engineering challenges.</p>
-        <span class="arrow">→</span>
-      </div>
-      <div class="horizontal-card">
-        <div>
-          <span class="num">/ 004</span>
-          <h3>[Project Name]</h3>
-          <span class="tags">+ research · jax</span>
-        </div>
-        <p>One-paragraph summary.</p>
-        <span class="arrow">→</span>
-      </div>
-      <div class="horizontal-card">
-        <div>
-          <span class="num">/ 005</span>
-          <h3>[Project Name]</h3>
-          <span class="tags">+ open-source</span>
-        </div>
-        <p>One-paragraph summary.</p>
-        <span class="arrow">→</span>
-      </div>
+<section class="section-spacing" style="background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container-wide">
+    <div class="section-heading reveal">
+      <h2>Selected projects</h2>
+      <a href="/projects/" class="more">All projects →</a>
+    </div>
+    <div class="posts-grid reveal">
+      <a href="/projects/" class="post-card">
+        <div class="thumb">▣</div>
+        <div class="meta">Computer Vision</div>
+        <h3>[Project Name]</h3>
+        <p>One-line summary of the system, scale, and outcome.</p>
+      </a>
+      <a href="/projects/" class="post-card">
+        <div class="thumb">⌘</div>
+        <div class="meta">NLP · LLMs</div>
+        <h3>[Project Name]</h3>
+        <p>One-line summary leading with what changed because this existed.</p>
+      </a>
+      <a href="/projects/" class="post-card">
+        <div class="thumb">⚙</div>
+        <div class="meta">ML Infrastructure</div>
+        <h3>[Project Name]</h3>
+        <p>One-line summary describing the engineering challenges.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -186,16 +94,13 @@ description: "Humza Ahmad — Machine Learning Engineer building AI systems that
 <section class="section-spacing">
   <div class="container-wide">
     <div class="section-heading reveal">
-      <div>
-        <span class="label"><span class="num">[03]</span> // navigate</span>
-        <h2>Explore.</h2>
-      </div>
+      <h2>Explore</h2>
     </div>
     <div class="feature-row reveal">
-      <a href="/projects/" class="feature-item">
-        <div class="icon">+</div>
-        <h3>Projects</h3>
-        <p>Applied ML across vision, language, and infrastructure.</p>
+      <a href="/about/" class="feature-item">
+        <div class="icon">◉</div>
+        <h3>About</h3>
+        <p>How I work, what I care about, and how I got here.</p>
       </a>
       <a href="/publications/" class="feature-item">
         <div class="icon">¶</div>
@@ -205,28 +110,23 @@ description: "Humza Ahmad — Machine Learning Engineer building AI systems that
       <a href="/talks/" class="feature-item">
         <div class="icon">◐</div>
         <h3>Talks</h3>
-        <p>Conference talks, workshops, and podcasts.</p>
+        <p>Conference talks, workshops, and podcast appearances.</p>
       </a>
-      <a href="/blog/" class="feature-item">
-        <div class="icon">/</div>
-        <h3>Blog</h3>
-        <p>Notes, ideas, and lessons from building ML systems.</p>
+      <a href="/uses/" class="feature-item">
+        <div class="icon">⌬</div>
+        <h3>Uses</h3>
+        <p>Hardware, editor, and the tools I rely on every day.</p>
       </a>
     </div>
   </div>
 </section>
 
 <section class="section-spacing">
-  <div class="container">
-    <div class="reveal">
-      <span class="label" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.18em;"><span style="color: var(--muted);">[04]</span> // approach</span>
-      <h2 style="margin-top: 1rem;">Built for production, not benchmarks.</h2>
-      <p style="font-family: var(--font-mono); font-size: 0.95rem; max-width: 680px; line-height: 1.75;">My focus is shipping ML systems that survive contact with real users, real data, and real cost constraints. Start with the business problem, pick the simplest tool that works, care about the unsexy parts — evaluation, monitoring, the engineering that keeps models alive once deployed.</p>
-      <p style="font-family: var(--font-mono); font-size: 0.95rem; max-width: 680px; line-height: 1.75;">If that's the kind of work you're doing, <a href="/about/" style="color: var(--accent); border-bottom: 1px solid var(--accent);">read more about how I work</a> or <a href="mailto:humzaahmad9066@gmail.com" style="color: var(--accent); border-bottom: 1px solid var(--accent);">get in touch</a>.</p>
-    </div>
+  <div class="container-wide">
     <div class="cta-box reveal">
-      <p style="font-family: var(--font-mono); font-size: 0.95rem; margin: 0 0 1.5rem;">Open to consulting, full-time, and collaboration on hard ML problems.</p>
-      <a href="mailto:humzaahmad9066@gmail.com" class="btn">Start a Conversation</a>
+      <h2 style="margin: 0 0 0.5rem;">Let's work together.</h2>
+      <p>Open to consulting, full-time roles, and collaboration on hard ML problems.</p>
+      <a href="mailto:humzaahmad9066@gmail.com" class="btn btn-arrow">Start a conversation</a>
     </div>
   </div>
 </section>
