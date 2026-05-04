@@ -546,7 +546,7 @@ blockquote { border-left: 2px solid var(--accent); padding: 0.25rem 0 0.25rem 1.
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.85s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 
-/* Scroll-pin zoom — image starts small, grows to fullscreen as you scroll */
+/* Scroll-pin zoom — only `transform: scale()` animates for max performance */
 .scroll-pin-section {
   position: relative;
   height: 100vh;
@@ -558,43 +558,116 @@ blockquote { border-left: 2px solid var(--accent); padding: 0.25rem 0 0.25rem 1.
 }
 .scroll-pin-target {
   position: relative;
+  width: min(92vw, 1100px);
+  aspect-ratio: 16 / 10;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Terminal window mockup */
+.terminal {
   width: 100%;
-  max-width: 1400px;
-  aspect-ratio: 16 / 9;
-  background-size: cover;
-  background-position: center;
+  height: 100%;
+  background: #0b0b10;
   border: 1px solid var(--border-strong);
-  box-shadow: 0 40px 100px -20px rgba(0,0,0,0.6), 0 0 80px rgba(56,189,248,0.15);
+  border-radius: 12px;
   overflow: hidden;
-  will-change: transform, border-radius;
-}
-.scroll-pin-target::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(8,8,12,0.85) 100%);
-  pointer-events: none;
-}
-.scroll-pin-overlay {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  padding: 3rem;
-  z-index: 2;
-  text-align: left;
-}
-.scroll-pin-overlay .eyebrow {
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  display: block;
-  margin-bottom: 0.5rem;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.7), 0 0 60px rgba(56,189,248,0.18);
 }
-.scroll-pin-overlay h2 { font-size: clamp(1.5rem, 4vw, 3rem); margin: 0 0 0.5rem; color: #fff; }
-.scroll-pin-overlay p { color: rgba(255,255,255,0.85); max-width: 600px; font-size: 1.05rem; margin: 0; }
-@media (max-width: 720px) {
-  .scroll-pin-overlay { padding: 1.5rem; }
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.9rem;
+  background: linear-gradient(180deg, #15151b, #0e0e14);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.terminal-bar .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.terminal-bar .red { background: #ff5f56; }
+.terminal-bar .yellow { background: #ffbd2e; }
+.terminal-bar .green { background: #27c93f; }
+.terminal-bar .terminal-title {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.terminal-body {
+  flex: 1;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+  line-height: 1.7;
+  color: #d4d4d8;
+  overflow: hidden;
+}
+.terminal-body .line {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  white-space: pre-wrap;
+}
+.terminal.typing .line { opacity: 1; transform: none; }
+.terminal.typing .line:nth-child(1) { transition-delay: 0.05s; }
+.terminal.typing .line:nth-child(2) { transition-delay: 0.45s; }
+.terminal.typing .line:nth-child(3) { transition-delay: 0.85s; }
+.terminal.typing .line:nth-child(4) { transition-delay: 1.20s; }
+.terminal.typing .line:nth-child(5) { transition-delay: 1.55s; }
+.terminal.typing .line:nth-child(6) { transition-delay: 1.85s; }
+.terminal.typing .line:nth-child(7) { transition-delay: 2.20s; }
+.terminal.typing .line:nth-child(8) { transition-delay: 2.50s; }
+.terminal.typing .line:nth-child(9) { transition-delay: 2.85s; }
+.terminal.typing .line:nth-child(10) { transition-delay: 3.10s; }
+.terminal-body .prompt { color: var(--accent); margin-right: 0.5em; }
+.terminal-body .prompt-user { color: #4ade80; }
+.terminal-body .prompt-host { color: #38bdf8; }
+.terminal-body .prompt-path { color: #a855f7; }
+.terminal-body .dir { color: var(--accent); }
+.terminal-body .ok { color: #4ade80; }
+.terminal-body .warn { color: #facc15; }
+.terminal-body .info { color: var(--muted); }
+.terminal-body .cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  background: var(--accent);
+  vertical-align: text-bottom;
+  margin-left: 0.15em;
+  animation: blink 1.05s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Inline terminal accent (used in hero) */
+.term-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--muted-strong);
+  background: rgba(11, 11, 16, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  backdrop-filter: blur(8px);
+}
+.term-accent .prompt { color: var(--accent); }
+.term-accent .cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  background: var(--accent);
+  vertical-align: text-bottom;
+  animation: blink 1.05s steps(1) infinite;
 }
 
 /* Horizontal scroll showcase */
