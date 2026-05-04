@@ -3,11 +3,11 @@ layout: default
 ---
 <article class="container" style="padding-top: 3rem; padding-bottom: 4rem;">
   <header style="margin-bottom: 2.5rem;">
-    <div class="mono" style="color: var(--muted); font-size: 0.85rem; margin-bottom: 0.5rem;">
-      {{ page.date | date: "%B %-d, %Y" }}{% if page.author %} · {{ page.author }}{% endif %}{% if page.reading_time %} · {{ page.reading_time }} min read{% endif %}
+    <div style="color: var(--muted); font-size: 0.95rem; margin-bottom: 0.75rem;">
+      {{ page.date | date: "%B %-d, %Y" }}{% if page.author %} · {{ page.author }}{% endif %}
     </div>
     <h1>{{ page.title }}</h1>
-    {% if page.description %}<p class="lede" style="color: var(--muted-strong); font-size: 1.1rem;">{{ page.description }}</p>{% endif %}
+    {% if page.description %}<p class="lede" style="color: var(--muted-strong); font-size: 1.2rem; margin-top: 0.75rem;">{{ page.description }}</p>{% endif %}
   </header>
 
   <div class="post-body">
@@ -15,5 +15,5 @@ layout: default
   </div>
 
   <hr>
-  <p style="font-size: 0.92rem;"><a href="{{ '/blog/' | relative_url }}">← All posts</a></p>
+  <p style="font-size: 0.95rem;"><a href="{{ '/blog/' | relative_url }}">← All posts</a></p>
 </article>
