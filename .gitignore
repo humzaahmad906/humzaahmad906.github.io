@@ -1,6 +1,6 @@
-_site/
+.bundle/
 .jekyll-cache/
 .jekyll-metadata
-vendor/
 Gemfile.lock
-.bundle/
+_site/
+vendor/
