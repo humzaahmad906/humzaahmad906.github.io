@@ -2,69 +2,92 @@
 layout: default
 title: Experience
 permalink: /experience/
-description: "A timeline of work, education, and recognition."
+description: "Humza Ahmad — work history, education, and what I've shipped."
 ---
 
 <header class="page-head reveal">
   <div class="container">
-    <div class="eyebrow">/ experience</div>
+    <div class="eyebrow">Experience</div>
     <h1>The path so far.</h1>
-    <p class="lede">A timeline of work, education, awards, and teaching.</p>
+    <p class="lede">Five years of shipping production ML across logistics, search, vision, and NLP.</p>
   </div>
 </header>
 
 <section class="section-spacing" style="padding-top: 1rem;">
   <div class="container">
 
-    <p class="reveal" style="text-align: right;"><a href="#" class="btn btn-ghost">Download Resume (PDF)</a></p>
-
     <div class="section-heading reveal"><div><span class="label">/ work</span><h2>Work</h2></div></div>
     <ul class="timeline reveal">
+
       <li>
-        <h4>[Job Title] · [Company]</h4>
-        <div class="role-meta">[Start] – Present · [Location]</div>
+        <h4>Senior Machine Learning Engineer &middot; PackageX</h4>
+        <div class="role-meta">July 2024 &mdash; Present &middot; Islamabad</div>
+        <p style="margin-top: 0.3rem;">Leading the development of an on-premise real-time document processing pipeline for conveyor-belt logistics.</p>
         <ul>
-          <li>One-line bullet leading with the outcome — number, scale, or impact first.</li>
-          <li>What you built, the team, and the constraint that mattered.</li>
-          <li>Promotion, recognition, or unique responsibility.</li>
+          <li>Built real-time document tracking from line-scan camera feeds on a moving conveyor, with optimal-frame selection per document and a custom-trained OCR engine.</li>
+          <li>Implemented post-OCR document classification with a LayoutLMv3 model, plus per-document-type entity extraction via token classification and key-value pair models.</li>
+          <li>Achieved <strong>94% F1</strong> on the in-house dataset &mdash; vs 65% for OpenAI GPT-4o off the shelf, 86% after fine-tuning.</li>
+          <li>Extended the pipeline with a compact VLM track (Qwen3.5-VL 0.8B/2B), fine-tuned on a synthetic logistics-document corpus generated in-house from 80+ carrier-label templates with print-simulation augmentation.</li>
+          <li>Applied SFT &rarr; DPO &rarr; QAT (PyTorch + TorchAO) with a per-layer sensitivity map to ship 4-bit quantized models on-device via MLX Swift (iOS) and Linux/CUDA, matching server-VLM accuracy at a fraction of the footprint.</li>
+          <li>Packaged the full pipeline as a cross-platform on-prem SDK (Python pip wheel, Linux/CUDA).</li>
         </ul>
       </li>
+
       <li>
-        <h4>[Job Title] · [Company]</h4>
-        <div class="role-meta">[Dates] · [Location]</div>
-        <ul><li>Outcome bullet.</li><li>Outcome bullet.</li></ul>
+        <h4>Machine Learning Engineer &middot; Cipher Savvy</h4>
+        <div class="role-meta">January 2023 &mdash; June 2024 &middot; Rawalpindi</div>
+        <p style="margin-top: 0.3rem;">Led end-to-end architecture for NLP &amp; LLM solutions. Built data cleaning, validation and versioning cycles for deep learning applications.</p>
+        <ul>
+          <li>Tweet Generator &amp; Doc Search application for News Articles &mdash; gathered training data from news APIs, transformed via GPT-3, built training and inference pipelines on Llama 2 and FlanT5 (LlamaIndex, HuggingFace, PyTorch). Evaluated with ROUGE.</li>
+        </ul>
       </li>
+
       <li>
-        <h4>[Job Title] · [Company]</h4>
-        <div class="role-meta">[Dates]</div>
-        <ul><li>Outcome bullet.</li></ul>
+        <h4>Machine Learning Engineer &middot; RevolveAI</h4>
+        <div class="role-meta">December 2021 &mdash; December 2022 &middot; Islamabad</div>
+        <p style="margin-top: 0.3rem;">Worked on Information Retrieval with LLMs. Optimized models via quantization and compression. Designed onboarding courses for junior data scientists. Deployed NLP and CV models on cloud, phone, and edge. Monitored for data drift.</p>
+        <ul>
+          <li><strong>Hellofact</strong> &mdash; web crawling + QA over PDFs. Download from web, OCR, categorize, embed into MongoDB + Pinecone, generate answers from most-similar context sub-documents. Python, AsyncIO, FastAPI, HuggingFace, Selenium, Zen-scrape, OpenAI.</li>
+          <li><strong>Multi-camera person identification</strong> &mdash; track a person across cameras using face and body embeddings. Registers new identities in Redis + MySQL, checks for existing match by cosine similarity. Python, OpenCV, TensorFlow.</li>
+        </ul>
       </li>
+
+      <li>
+        <h4>Jr Machine Learning Engineer &middot; RevolveAI</h4>
+        <div class="role-meta">November 2020 &mdash; December 2021 &middot; Islamabad</div>
+        <p style="margin-top: 0.3rem;">Implemented model training and hyperparameter tuning techniques across CV and NLP problems.</p>
+        <ul>
+          <li><strong>FAQ Categorization</strong> &mdash; BERT and Roberta for semantic similarity classification. Custom training/inference pipeline deployed on AWS with email alerts.</li>
+          <li><strong>Health app</strong> &mdash; XGBoost classifiers for exercise duration and calorie intake; Nearest-Neighbor meal planning against a fit-a-bit dataset.</li>
+          <li><strong>Tumor Segmentation</strong> &mdash; vanilla U-Net vs U-Net + Inception V3 modules; compared Accuracy, MIOU, F1, Recall, Precision, Dice. TensorFlow + CUDA.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h4>Jr Machine Learning Engineer &middot; Uforia InfoTech</h4>
+        <div class="role-meta">November 2019 &mdash; October 2020 &middot; Islamabad</div>
+        <p style="margin-top: 0.3rem;">Designed an end-to-end interactive image segmentation pipeline.</p>
+        <ul>
+          <li><strong>Interactive Background Remover</strong> &mdash; fine-tuned Mask-RCNN and YOLACT for automatic segmentation; f-BRS plus superpixel + GrabCut for interactive correction; deep alpha matting for smooth edges. PyTorch, TensorFlow, OpenCV.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h4>Assistant Researcher &middot; RiseLab, NUST</h4>
+        <div class="role-meta">January 2018 &mdash; December 2021 &middot; Islamabad &middot; part-time</div>
+        <p style="margin-top: 0.3rem;">Designed ML solutions on near-infrared light data to cluster brain activities.</p>
+        <ul>
+          <li><strong>FNIR Activity Segmentation</strong> &mdash; classified task difficulty from 12 near-infrared sensors measuring hemoglobin levels. Cleaning, feature engineering, dimensionality reduction, model comparison. Scikit-learn, Pandas, Keras.</li>
+        </ul>
+      </li>
+
     </ul>
 
     <div class="section-heading reveal"><div><span class="label">/ education</span><h2>Education</h2></div></div>
     <ul class="timeline reveal">
       <li>
-        <h4>[Degree], [Field] · [University]</h4>
-        <div class="role-meta">[Years]</div>
-        <ul><li>Thesis: [topic], advised by [name].</li><li>Honors and notable coursework.</li></ul>
-      </li>
-    </ul>
-
-    <div class="section-heading reveal"><div><span class="label">/ recognition</span><h2>Awards &amp; recognition</h2></div></div>
-    <ul class="entry-list reveal">
-      <li>
-        <h3>[Award name]</h3>
-        <div class="meta">[Granting body] · [Year]</div>
-        <p>One-sentence description.</p>
-      </li>
-    </ul>
-
-    <div class="section-heading reveal"><div><span class="label">/ teaching</span><h2>Teaching &amp; mentoring</h2></div></div>
-    <ul class="entry-list reveal">
-      <li>
-        <h3>[Course / program]</h3>
-        <div class="meta">[Institution] · [Dates]</div>
-        <p>What you taught and to whom.</p>
+        <h4>BS in Electrical Engineering &middot; National University of Sciences &amp; Technology (NUST)</h4>
+        <div class="role-meta">September 2015 &mdash; July 2019</div>
       </li>
     </ul>
 

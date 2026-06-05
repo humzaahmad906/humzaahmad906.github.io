@@ -1,11 +1,12 @@
 title: Humza Ahmad
 tagline: Machine Learning Engineer
-description: Personal site, projects, writing, and talks by Humza Ahmad — Machine Learning Engineer.
+description: ML engineer who ships. I build production ML systems end-to-end across cloud, on-prem, and edge — training, quantization, deployment, SDK packaging.
 url: "https://humzaahmad906.github.io"
 baseurl: ""
 author: Humza Ahmad
 email: humzaahmad9066@gmail.com
 github_username: humzaahmad906
+linkedin_username: humza-ahmad-7a2830130
 
 markdown: kramdown
 highlighter: rouge
