@@ -2,14 +2,14 @@
 layout: default
 title: About
 permalink: /about/
-description: "About Humza Ahmad — Machine Learning Engineer."
+description: "About Humza Ahmad — Machine Learning Engineer at PackageX."
 ---
 
 <header class="page-head reveal">
   <div class="container">
-    <div class="eyebrow">/ about</div>
+    <div class="eyebrow">About</div>
     <h1>Hi, I'm Humza.</h1>
-    <p class="lede">Machine Learning Engineer focused on building AI systems that work in the real world — not just on benchmarks.</p>
+    <p class="lede">Senior Machine Learning Engineer at PackageX. I ship production ML systems &mdash; across cloud, on-prem, and edge.</p>
   </div>
 </header>
 
@@ -19,9 +19,11 @@ description: "About Humza Ahmad — Machine Learning Engineer."
     <div class="about-header reveal">
       <img src="{{ '/images/humza.jpeg' | relative_url }}" alt="Humza Ahmad">
       <div>
-        <p style="font-size: 1.1rem;">[One-paragraph intro: who you are, what you do, where you've worked, and what makes your perspective different. Lead with the strongest one-sentence claim.]</p>
-        <p>[Second paragraph: how you got into ML, what problems excite you, and what you've shipped that you're proud of.]</p>
-        <p>[Third paragraph: what you're working on now and what you're available for. See <a href="/now/">/now</a> for the always-up-to-date version.]</p>
+        <p style="font-size: 1.1rem;">I'm an ML engineer focused on shipping. Five years in, I've built production systems end-to-end &mdash; from data collection and training through quantization, deployment, and SDK packaging &mdash; across cloud, on-prem, and edge.</p>
+
+        <p>I'm currently Senior Machine Learning Engineer at <strong>PackageX</strong> in Islamabad, where I lead an on-premise real-time document processing pipeline for conveyor-belt logistics. The work spans line-scan camera tracking, a custom OCR engine, LayoutLMv3 entity extraction, and a compact VLM track (Qwen3.5-VL fine-tuned with SFT &rarr; DPO &rarr; QAT) deployed 4-bit quantized on iOS via MLX Swift. We hit 94% F1 on in-house data &mdash; vs 65% for GPT-4o off the shelf.</p>
+
+        <p>Before PackageX I worked at <strong>Cipher Savvy</strong> and <strong>RevolveAI</strong> on NLP and LLM systems: tweet generation, web-scale document search with Pinecone, multi-camera person identification, BERT/Roberta classifiers on AWS, and U-Net medical imaging. I hold a <strong>BS in Electrical Engineering from NUST</strong>.</p>
       </div>
     </div>
 
@@ -31,27 +33,60 @@ description: "About Humza Ahmad — Machine Learning Engineer."
     <div class="skills-grid reveal">
       <div class="skill-group">
         <h4>Languages</h4>
-        <ul><li>Python</li><li>SQL</li><li>JavaScript / TS</li><li>C++</li></ul>
+        <ul>
+          <li>Python</li>
+          <li>C / C++</li>
+          <li>SQL</li>
+        </ul>
       </div>
       <div class="skill-group">
         <h4>ML / DL</h4>
-        <ul><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>Hugging Face</li><li>JAX</li></ul>
+        <ul>
+          <li>PyTorch</li>
+          <li>HuggingFace</li>
+          <li>scikit-learn</li>
+          <li>FastAI</li>
+          <li>NLTK</li>
+        </ul>
       </div>
       <div class="skill-group">
-        <h4>Data &amp; Infra</h4>
-        <ul><li>Pandas / Polars</li><li>Spark</li><li>Airflow</li><li>dbt</li><li>Postgres</li></ul>
+        <h4>Computer Vision</h4>
+        <ul>
+          <li>OCR &amp; document AI</li>
+          <li>LayoutLMv3</li>
+          <li>Mask-RCNN / YOLACT</li>
+          <li>U-Net</li>
+          <li>OpenCV</li>
+        </ul>
       </div>
       <div class="skill-group">
-        <h4>Cloud &amp; MLOps</h4>
-        <ul><li>AWS / GCP</li><li>Docker / K8s</li><li>Terraform</li><li>MLflow / W&amp;B</li></ul>
+        <h4>LLMs &amp; VLMs</h4>
+        <ul>
+          <li>Qwen, Llama, BERT, Roberta</li>
+          <li>SFT &rarr; DPO &rarr; QAT</li>
+          <li>RAG &amp; vector search</li>
+          <li>LlamaIndex, Haystack</li>
+        </ul>
       </div>
       <div class="skill-group">
-        <h4>LLM Stack</h4>
-        <ul><li>OpenAI / Anthropic</li><li>RAG &amp; vector search</li><li>LangChain / LlamaIndex</li><li>Fine-tuning &amp; LoRA</li></ul>
+        <h4>Edge &amp; MLOps</h4>
+        <ul>
+          <li>MLX Swift (iOS)</li>
+          <li>TorchAO quantization</li>
+          <li>Docker</li>
+          <li>AWS / GCP</li>
+          <li>CUDA</li>
+        </ul>
       </div>
       <div class="skill-group">
-        <h4>Other</h4>
-        <ul><li>System design</li><li>Code review &amp; mentoring</li><li>Technical writing</li></ul>
+        <h4>Data</h4>
+        <ul>
+          <li>Pandas</li>
+          <li>Pinecone</li>
+          <li>Elasticsearch</li>
+          <li>Redis</li>
+          <li>MongoDB / MySQL</li>
+        </ul>
       </div>
     </div>
 
@@ -60,9 +95,10 @@ description: "About Humza Ahmad — Machine Learning Engineer."
     </div>
     <ul class="contact-list reveal">
       <li><strong>Email</strong><a href="mailto:humzaahmad9066@gmail.com">humzaahmad9066@gmail.com</a></li>
+      <li><strong>Phone</strong><a href="tel:+923145090691">+92 314 509 0691</a></li>
       <li><strong>GitHub</strong><a href="https://github.com/humzaahmad906">github.com/humzaahmad906</a></li>
-      <li><strong>LinkedIn</strong><a href="https://www.linkedin.com/">linkedin.com</a></li>
-      <li><strong>Twitter</strong><a href="https://twitter.com/">twitter.com</a></li>
+      <li><strong>LinkedIn</strong><a href="https://linkedin.com/in/humza-ahmad-7a2830130/">linkedin.com/in/humza-ahmad-7a2830130</a></li>
+      <li><strong>Location</strong>Islamabad, Pakistan</li>
     </ul>
 
   </div>

@@ -2,75 +2,102 @@
 layout: default
 title: Projects
 permalink: /projects/
-description: "Selected projects in machine learning, computer vision, NLP, and ML infrastructure."
+description: "Selected projects across logistics, NLP, computer vision, and ML infrastructure."
 ---
 
 <header class="page-head reveal">
   <div class="container-wide">
-    <div class="eyebrow">/ projects</div>
-    <h1>Things I've built.</h1>
-    <p class="lede">Selected work across machine learning, computer vision, NLP, and the infrastructure that keeps models alive in production.</p>
+    <div class="eyebrow">Projects</div>
+    <h1>Things I've shipped.</h1>
+    <p class="lede">Selected work across logistics document AI, NLP / LLM systems, computer vision, and ML infrastructure.</p>
   </div>
 </header>
 
 <section class="section-spacing" style="padding-top: 1.5rem;">
   <div class="container-wide">
-    <div class="section-heading reveal">
-      <div>
-        <span class="label">/ featured</span>
-        <h2>Featured projects</h2>
-      </div>
-    </div>
-    <div class="card-grid reveal">
-      <div class="card">
-        <h3>[Project Name]</h3>
-        <div class="tags">computer-vision · pytorch · aws</div>
-        <p>One-paragraph summary leading with outcome — scale, accuracy, latency, or impact.</p>
-        <div class="card-links"><a href="#">GitHub</a><a href="#">Demo</a><a href="#">Write-up</a></div>
-      </div>
-      <div class="card">
-        <h3>[Project Name]</h3>
-        <div class="tags">nlp · llms · rag</div>
-        <p>One-paragraph summary. Lead with what changed because this existed.</p>
-        <div class="card-links"><a href="#">GitHub</a><a href="#">Demo</a></div>
-      </div>
-      <div class="card">
-        <h3>[Project Name]</h3>
-        <div class="tags">ml-infra · kubernetes · python</div>
-        <p>One-paragraph summary describing the system, your role, and the engineering challenges.</p>
-        <div class="card-links"><a href="#">GitHub</a></div>
-      </div>
-      <div class="card">
-        <h3>[Project Name]</h3>
-        <div class="tags">research · jax</div>
-        <p>One-paragraph summary.</p>
-        <div class="card-links"><a href="#">GitHub</a><a href="#">Paper</a></div>
-      </div>
-    </div>
 
     <div class="section-heading reveal">
-      <div>
-        <span class="label">/ side projects</span>
-        <h2>Other work</h2>
-      </div>
+      <div><span class="label">/ featured</span><h2>Featured</h2></div>
     </div>
     <div class="card-grid reveal">
+
       <div class="card">
-        <h3>[Side Project]</h3>
-        <div class="tags">python · open-source</div>
-        <p>Smaller experiment. Briefly describe what it does and what you learned.</p>
-        <div class="card-links"><a href="#">GitHub</a></div>
+        <div class="tags">PackageX &middot; CV &middot; OCR</div>
+        <h3>On-prem document pipeline for conveyor logistics</h3>
+        <p>Real-time entity extraction from logistic documents on a moving conveyor. Line-scan camera tracking with optimal-frame selection per document, a custom-trained OCR engine, LayoutLMv3 classification, and per-document-type entity models. <strong>94% F1</strong> in-house vs 65% for GPT-4o.</p>
       </div>
+
       <div class="card">
-        <h3>[Side Project]</h3>
-        <div class="tags">javascript · hackathon</div>
-        <p>Hackathon or weekend build.</p>
-        <div class="card-links"><a href="#">GitHub</a></div>
+        <div class="tags">PackageX &middot; VLMs &middot; Quantization</div>
+        <h3>Compact VLM track for edge deployment</h3>
+        <p>Qwen3.5-VL 0.8B/2B fine-tuned on a synthetic logistics corpus generated from 80+ carrier-label templates with print-simulation augmentation. <strong>SFT &rarr; DPO &rarr; QAT</strong> (PyTorch + TorchAO) with per-layer sensitivity maps. Ships 4-bit on-device via MLX Swift (iOS) and Linux/CUDA, matching server accuracy.</p>
       </div>
+
+      <div class="card">
+        <div class="tags">PackageX &middot; SDK &middot; Packaging</div>
+        <h3>Cross-platform on-prem SDK</h3>
+        <p>Packaged the full document-processing pipeline as a deployable on-prem SDK &mdash; Python pip wheel for Linux/CUDA, and a Swift package for iOS/MLX. Lets internal teams drop the model stack into new product surfaces without re-deriving training/inference plumbing.</p>
+      </div>
+
+      <div class="card">
+        <div class="tags">RevolveAI &middot; NLP &middot; RAG</div>
+        <h3>Hellofact &mdash; web crawling &amp; QA</h3>
+        <p>Downloads PDFs from the web, OCRs them, categorizes by content/metadata, indexes into MongoDB + Pinecone with embeddings, and answers user questions from the most-similar context sub-documents. Python, AsyncIO, FastAPI, HuggingFace, Selenium, Zen-scrape, OpenAI.</p>
+      </div>
+
+      <div class="card">
+        <div class="tags">RevolveAI &middot; CV &middot; Multi-camera</div>
+        <h3>Multi-camera person identification</h3>
+        <p>Tracks a person across cameras using face and body embeddings. On first appearance, registers identity in Redis + MySQL; on re-appearance, matches via cosine similarity. Embeddings reload from MySQL into Redis on server restart. OpenCV, TensorFlow.</p>
+      </div>
+
+      <div class="card">
+        <div class="tags">Cipher Savvy &middot; LLMs &middot; Summarization</div>
+        <h3>Tweet generator &amp; doc search for news</h3>
+        <p>Pulls news articles, transforms with GPT-3, fine-tunes Llama 2 and FlanT5 for concise tweet generation. Built around LlamaIndex, HuggingFace, and PyTorch; evaluated with ROUGE.</p>
+      </div>
+
+    </div>
+
+    <div class="section-heading reveal" style="margin-top: 3rem;">
+      <div><span class="label">/ earlier</span><h2>Earlier work</h2></div>
+    </div>
+    <div class="card-grid reveal">
+
+      <div class="card">
+        <div class="tags">RevolveAI &middot; NLP</div>
+        <h3>FAQ categorization with BERT &amp; Roberta</h3>
+        <p>Semantic-similarity classifier for FAQ answers. Custom training and inference pipeline; deployed on AWS with email alerts on drift and prediction failures.</p>
+      </div>
+
+      <div class="card">
+        <div class="tags">RevolveAI &middot; XGBoost</div>
+        <h3>Health app &mdash; meal &amp; exercise planning</h3>
+        <p>Two XGBoost classifiers predict exercise duration and calorie intake from user history; Nearest-Neighbor matches a meal plan from a fit-a-bit dataset against the predicted calorie target.</p>
+      </div>
+
+      <div class="card">
+        <div class="tags">RevolveAI &middot; Medical CV</div>
+        <h3>Tumor segmentation with U-Net</h3>
+        <p>Vanilla U-Net vs U-Net + Inception V3 modules for image segmentation. Compared Accuracy, MIOU, F1, Recall, Precision, and Dice Coefficient. TensorFlow + CUDA.</p>
+      </div>
+
+      <div class="card">
+        <div class="tags">Uforia &middot; Interactive CV</div>
+        <h3>Interactive background remover</h3>
+        <p>End-to-end pipeline: Mask-RCNN + YOLACT for automatic segmentation, f-BRS + superpixel + GrabCut for interactive correction, deep alpha matting for smooth edges. PyTorch, TensorFlow, OpenCV.</p>
+      </div>
+
+      <div class="card">
+        <div class="tags">RiseLab NUST &middot; Bio-signals</div>
+        <h3>FNIR activity segmentation</h3>
+        <p>Classified task difficulty levels from 12 near-infrared sensors measuring hemoglobin. Cleaning, feature extraction, dimensionality reduction, and model comparison. Scikit-learn, Pandas, Keras.</p>
+      </div>
+
     </div>
 
     <div class="cta-box reveal">
-      <p>Working on something interesting? I'm open to consulting and collaboration.</p>
+      <p>Working on something interesting? I'm open to collaboration and consulting.</p>
       <a href="mailto:humzaahmad9066@gmail.com" class="btn btn-arrow">Get in touch</a>
     </div>
   </div>
