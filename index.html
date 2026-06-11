@@ -74,24 +74,14 @@ description: "Humza Ahmad — Machine Learning Engineer. I build production ML s
       <a href="/blogs/" class="more">All posts &rarr;</a>
     </div>
     <div class="posts-grid reveal">
-      <a href="/blogs/" class="post-card">
+      {% for post in site.posts limit: 3 %}
+      <a href="{{ post.url | relative_url }}" class="post-card">
         <div class="thumb"></div>
-        <div class="meta">Coming soon</div>
-        <h3>Notes on shipping VLMs to the edge</h3>
-        <p>What I learned moving Qwen3.5-VL onto iOS &mdash; quantization, sensitivity maps, SDK packaging.</p>
+        <div class="meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+        <h3>{{ post.title }}</h3>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
       </a>
-      <a href="/blogs/" class="post-card">
-        <div class="thumb"></div>
-        <div class="meta">Coming soon</div>
-        <h3>OCR on a moving conveyor belt</h3>
-        <p>The unglamorous engineering behind a real-time document pipeline that actually works.</p>
-      </a>
-      <a href="/blogs/" class="post-card">
-        <div class="thumb"></div>
-        <div class="meta">Coming soon</div>
-        <h3>Why I beat GPT-4o with a smaller model</h3>
-        <p>94% F1 vs 65% &mdash; the case for owning your dataset and your model.</p>
-      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
